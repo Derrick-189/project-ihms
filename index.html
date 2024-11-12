@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="text-center">Patient Registration</h2>
+    <form action="register.php" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control" name="gender" required>
+                <option value="">Select...</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="medical_history">Medical History</label>
+            <textarea class="form-control" id="medical_history" name="medical_history" rows="3" placeholder="Enter any medical history"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" onclick="window.open('view patient.html', '_blank')">Register</button>
+
+        <!--<button type="submit" class="btn btn-primary btn-block">Register</button>
+        <button type="submit" class="btn btn-primary btn-block"onclick="document.location='view patient.html'" target="_blank">Register</button>
+        <p><a href="view patient.html" target="_blank"> View </a></p> -->
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

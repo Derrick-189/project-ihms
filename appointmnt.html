@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Book an Appointment</h2>
+    <form action="appointments.php" method="post">
+        <div class="form-group">
+            <label for="patient_name">Patient Name</label>
+            <input type="text" class="form-control" id="patient_name" name="patient_name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="doctor">Select Doctor</label>
+            <select id="doctor" class="form-control" name="doctor" required>
+                <option value="">Choose a doctor...</option>
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="Dr. Johnson">Dr. Johnson</option>
+                <option value="Dr. Williams">Dr. Williams</option>
+                <option value="Dr. Brown">Dr. Brown</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="date">Appointment Date</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="time">Appointment Time</label>
+                <input type="time" class="form-control" id="time" name="time" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+            <label for="comments">Additional Comments</label>
+            <textarea class="form-control" id="comments" name="comments" rows="3" placeholder="Any additional information"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Book Appointment</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>
